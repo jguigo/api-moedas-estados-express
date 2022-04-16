@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
-const estados = require('../models/estados.json');
+const estados = require('./models/estados.json');
 
 const app = express();
 

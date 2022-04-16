@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const moedas = require('../model/moedas.json');
+
+const moedas = require('./model/moedas.json');
 
 const app = express();
 
