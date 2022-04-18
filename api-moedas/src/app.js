@@ -1,14 +1,9 @@
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
+const routes = require("./routes");
+const app = express(); //http.createServer
 
-const moedas = require('./model/moedas.json');
+app.use(cors()); // liberando cors
+app.use(routes);
 
-const app = express();
-
-app.use(cors());
-
-app.get('/moedas', (req, res) => {
-    res.json(moedas);
-})
-
-app.listen(4000, ()=>console.log('Server on at port:4000'));
+app.listen(4000, () => console.log("Servidor Rodando na porta 4000"));
